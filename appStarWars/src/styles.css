@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 * {  
     font-family: Roboto;
-    cursor: pointer;
+    cursor:url(/../../assets/hand.cur), auto;
 }
 
-.url{cursor:url(http://falconmasters.com/img/cursor.gif), auto;}
+/*.url{cursor:url(http://falconmasters.com/img/cursor.gif), auto;}*/

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+    font-size: small;
+    letter-spacing: 1px;
+
+}
+
+.navbar{
+    background-color: black;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 0;
+}
+
+a.nav-link.active {
+    color: grey;
+}
+
+a.nav-link.active:hover {
+    color:blanchedalmond
+}
+
+.nav-item{
+    border-left: 1px solid grey;
+}
+
+.starshiptroopers{
+    border-right: 1px solid grey;
+}
+
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background: url("/../../assets/background.jpeg");
+    
+}
+
+
+.navbar-dark .navbar-nav .nav-link.active{
+    color: grey;
+}
+
+.navbar-dark .navbar-nav .nav-link.active:hover{
+    color: blanchedalmond;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+
+.invisible {
+    visibility: hidden;
+  }
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+
+
+@media screen and (min-width: 992px){
+    .navbar-collapse{
+        flex-grow: 0;
+    }
+    .container-fluid{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .container-fluid{
+        display: 0;
+    }
+
+    .nav-item{
+        border-left: 0;
+    }
+    
+    .starshiptroopers{
+        border-right: 0;
+    }
+
+    .logo{
+        src: hidden;
+        src: url("/../../assets/logo_horizontal.png");
+    }
+
+    .navbar-dark .navbar-nav .nav-link.active:hover{
+        box-shadow: none;
+        transition: none;
+    }
+
+}

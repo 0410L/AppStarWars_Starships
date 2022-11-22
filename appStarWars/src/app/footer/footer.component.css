@@ -1,0 +1,22 @@
+* {
+    font-weight: auto;
+    font-size: smaller;
+    color: grey;
+    letter-spacing: 1px;
+}
+
+footer{
+
+    background-image:url("../../assets/vader.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media screen (max-width: 992px){
+    overflow-x: hidden;
+}
