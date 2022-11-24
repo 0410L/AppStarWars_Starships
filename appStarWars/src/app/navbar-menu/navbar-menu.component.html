@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 <div class="col logo bg-black text-center pt-3 pb-3 sticky">
-    <img src="/../../assets/logo.png" class="logotipo col-lg" style="width: 10%;">
+    <img src="/../../assets/logo.png" class="logotipo col-lg" (click)="navegarWelcome()" style="width: 10%;">
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark sticky">
     <div class="container-fluid justify-content-start justify-content-lg-center">
@@ -18,11 +18,11 @@
         <ul class="navbar-nav bordes">
 <!--BOTON HOME-->
           <li class="nav-item text-center">
-            <a class="nav-link active" aria-current="page" href="#"> HOME </a>
+            <a class="nav-link active" (click)="navegarHome()" style="justify-content: center" aria-current="page"> HOME </a>
           </li>
 <!--BOTON STARSHIPS-->
           <li class="nav-item text-center starshiptroopers">
-            <a class="nav-link active" aria-current="page" href="#"> STARSHIPS </a>
+            <a class="nav-link active" (click)="navegarStarships()" style="justify-content: center"  aria-current="page"> STARSHIPS </a>
           </li>
 
         </ul>

@@ -1,0 +1,14 @@
+.background {
+    background-image: url("/../../assets/background.jpeg");
+    overflow-x: hidden;
+}
+
+*{
+    text-align: center;
+    justify-content: center;
+    color: aliceblue;
+    font-family: Roboto;
+    font-size: medium;
+    background-color: black;
+
+}
