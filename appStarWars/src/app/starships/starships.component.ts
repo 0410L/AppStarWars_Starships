@@ -10,12 +10,9 @@ export class StarshipsComponent implements OnInit {
   
   constructor (private StarshipsService: StarshipsService){}
 
-  items: any[]=[]
-
 
   get mostrar (){
     
-    this.StarshipsService.verlistaNaves();
     return this.StarshipsService.mostrar;
   }
 

@@ -4,9 +4,9 @@
 
     <div class="container mt-4">
 
-        <div class="row d-flex justify-content-center text-start mb-3">
+        <div *ngIf="mostrar" class="row d-flex justify-content-center text-start mb-3">
 
-            <div *ngFor="let naves of mostrar" class="col-8"> 
+            <div *ngFor="let naves of mostrar.results" class="col-8"> 
 
                     <div class="card-body rounded border border-white">
                         <!--MUESTRA TITULO NAVES-->

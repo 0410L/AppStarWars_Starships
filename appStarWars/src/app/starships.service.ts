@@ -7,14 +7,26 @@ import { Starships, Result } from './starships.interface';
 })
 export class StarshipsService {
 
-  public mostrar: Result []=[];
+  public mostrar!:Starships
 
-  constructor( private http: HttpClient) {}
+  constructor( private http: HttpClient) {
+    this.verlistaNaves()
+  }
 
 
 
 verlistaNaves() {
-  this.http.get<Starships>('https://swapi.dev/api/starships/').subscribe( ( p ) => {this.mostrar = p.results});
+  this.http.get<Starships>('https://swapi.dev/api/starships/').subscribe( ( p ) => {
+    this.mostrar = p;
+    console.log(this.mostrar);
+  });
+  
 }
+
+verMasLista(){
+alert('hola')}
+
+
+
 
 }
