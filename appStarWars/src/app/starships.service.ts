@@ -10,18 +10,18 @@ export class StarshipsService {
   public mostrar!:Starships
 
   constructor( private http: HttpClient) {
-    this.verlistaNaves()
+    this.verlistaNaves();
   }
 
 
 
 verlistaNaves() {
-  this.http.get<Starships>('https://swapi.dev/api/starships/').subscribe( ( p ) => {
+  this.http.get<Starships>('https://swapi.dev/api/starships/?page=1').subscribe( ( p ) => {
     this.mostrar = p;
     console.log(this.mostrar);
   });
-  
 }
+
 
 verMasLista(){
 alert('hola')}

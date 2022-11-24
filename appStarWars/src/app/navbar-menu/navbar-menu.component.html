@@ -3,14 +3,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-<div class="col logo bg-black text-center pt-3 pb-3 sticky">
-    <img src="/../../assets/logo.png" class="logotipo col-lg" (click)="navegarWelcome()" style="width: 10%;">
+<!--LOGO GRANDE STAR WARS (aparece desde el inicio hasta que la pantalla se hace pequeña 'lg')-->
+<div class="contenedor col logo bg-black text-center pt-3 pb-3 sticky d-none d-lg-flex">
+    <img src="/../../assets/logo.png" class="logotipo" (click)="navegarWelcome()" style="width: 10%;">
+    <div class="centrado d-none d-lg-flex">
+      <button class="button">LOG IN</button><button class="button">SIGN UP</button>
+    </div>
+</div>
+
+
+<!--LOGO HORIZONTAL STAR WARS (aparece cuando es menor de 'lg' pantalla toogle)-->
+<div class="contenedor col logo bg-black text-center pt-3 pb-3 sticky d-lg-none">
+  <img src="/../../assets/logoh.png" class="logotipo" (click)="navegarWelcome()" style="width: 20%;">
+  <div class="centrado d-none d-lg-flex">
+    <button class="button">LOG IN</button><button class="button">SIGN UP</button>
+  </div>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky">
     <div class="container-fluid justify-content-start justify-content-lg-center">
       
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
        
         <span class="navbar-toggler-icon"></span>
 
@@ -28,6 +41,14 @@
 <!--BOTON STARSHIPS-->
           <li class="nav-item text-center starshiptroopers">
             <a class="nav-link active" (click)="navegarStarships()" style="justify-content: center"  aria-current="page"> STARSHIPS </a>
+          </li>
+
+          <li class="nav-item text-center d-lg-none">
+            <a class="nav-link active" (click)="logIn()" style="justify-content: center"  aria-current="page"> LOG IN </a>
+          </li>
+
+          <li class="nav-item text-center d-lg-none">
+            <a class="nav-link active" (click)="signUp()" style="justify-content: center"  aria-current="page"> SIGN UP </a>
           </li>
 
         </ul>

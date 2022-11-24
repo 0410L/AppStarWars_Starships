@@ -27,6 +27,14 @@ export class NavbarMenuComponent implements OnInit {
     //this.router.navigate(['welcome'])
   }
 
+  logIn(){
+
+  }
+
+  signUp(){
+
+  }
+
 
   ngOnInit(): void {
   }

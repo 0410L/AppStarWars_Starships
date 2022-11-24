@@ -58,8 +58,34 @@ a.nav-link.active:hover {
 
 .navbar-collapse {
     flex-grow: 0;
+    
 }
 
+
+.contenedor{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+button{
+    color: aliceblue;
+}
+
+.centrado{
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    color: aliceblue;
+    font-size: medium;
+    background-color: transparent;
+}
+
+
+button:hover{
+    color: rgba(79, 179, 250, 0.913);
+    
+}
 
 
 @media screen and (min-width: 992px){
@@ -75,6 +101,10 @@ a.nav-link.active:hover {
 @media screen and (max-width: 992px){
     .container-fluid{
         display: 0;
+    }
+
+    .button{
+        opacity: 100%;
     }
 
     .nav-item{

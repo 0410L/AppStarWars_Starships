@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  /*
+  ngOnInit(): Promise<void> {
+    const intro = document.getElementById("intro");
+
+    try
+
+    intro?.play()
+    
+  }
+  */
 
 }

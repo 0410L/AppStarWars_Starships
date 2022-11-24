@@ -1,6 +1,7 @@
 .background {
     background-image: url("/../../assets/background.jpeg");
     overflow-x: hidden;
+    background-color: hidden;
 }
 
 *{
@@ -8,11 +9,27 @@
     justify-content: center;
     color: aliceblue;
     font-family: Roboto;
-    font-size: medium;
+    background-color: transparent;
 
 }
 
 h6{
     font-size: smaller;
     font-style: italic;
+}
+
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300px;
+    background-color: transparent;
 }
