@@ -9,6 +9,7 @@ import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ListadoComponent } from './listado/listado.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     NavbarMenuComponent,
     FooterComponent,
     PageNotFoundComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,
