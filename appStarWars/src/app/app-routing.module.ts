@@ -7,13 +7,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   //{path: '', redirectTo: 'welcome', pathMatch: 'full' },
- // {path: '', redirectTo: 'home', pathMatch: 'full', },
- 
-  {path: '', component: HomeComponent},
-  {path: 'welcome', component: WelcomeComponent},
+  {path: '', redirectTo: 'welcome', pathMatch: 'full', },
   {path: 'home', component: HomeComponent},
   {path: 'starships', component: StarshipsComponent},
   {path: '**', component: PageNotFoundComponent},
+  {path: 'welcome', component: WelcomeComponent},
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,13 @@ export class AppComponent {
   this.navegacionweb = !this.navegacionweb;
   }
   navegacionweb:boolean = (false); //funció "boolean" / "false" per amagar el contingut de 'pantallaPrincipal'
+  
+  
+  constructor(private router: Router) {
+    this.router.navigate(['home'])
+  }
+  
+
 
 
 }
