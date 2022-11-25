@@ -5,9 +5,10 @@
     background-size: auto; background-repeat: repeat; background-position: center center; overflow: hidden;">
 
         <div class="titulo text-center pb-4 justify-content-center text-center">
-            <video autoplay id="intro" autoplay="true" loop="true" width="60%" height="auto" >
+            <video class="vid" autoplay muted width="60%" height="auto">
+                <source src="/../../assets/intro.mp4" poster="/../../assets/img1.png" autoplay="true" loop="true" type="video/mp4"style="width:100%; height:auto">
                 <!--<source src='https://im5.ezgif.com/tmp/ezgif-5-e339d978b1.mp4' type="video/mp4"style="width:auto; height:auto; backround-size:100px">-->
-                <source autoplay src="/../../assets/intro.mp4" poster="/../../assets/img1.png" autoplay="true" loop="true" type="video/mp4"style="width:100%; height:auto">
+                <!--<source autoplay src="{{videointro()}}" poster="/../../assets/img1.png" autoplay="true" loop="true" type="video/mp4"style="width:100%; height:auto">-->
             </video>
             <br>
             <h6>"May the source be with you"</h6>

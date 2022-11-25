@@ -8,7 +8,7 @@
 }
 
 .navbar{
-    background-color: black;
+    
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     padding: 0;
@@ -16,6 +16,7 @@
 
 a.nav-link.active {
     color: grey;
+    background-color: transparent;
 }
 
 a.nav-link.active:hover {
@@ -24,10 +25,12 @@ a.nav-link.active:hover {
 
 .nav-item{
     border-left: 1px solid grey;
+    background-color: transparent;
 }
 
 .starshiptroopers{
     border-right: 1px solid grey;
+    background-color: transparent;
 }
 
 
@@ -103,9 +106,7 @@ button:hover{
         display: 0;
     }
 
-    .button{
-        opacity: 100%;
-    }
+
 
     .nav-item{
         border-left: 0;
@@ -126,3 +127,4 @@ button:hover{
     }
 
 }
+

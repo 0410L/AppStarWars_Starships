@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
 app-navbar-menu {position: sticky;top: 0;}
-/*app-footer-menu {position: sticky;bottom: 0;}*/
+
 
 *{
-    background-color: black;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+h2{
+    
+    font-family: 'Oswald', sans-serif;
+    color: aliceblue;
+    font-size: xx-large;
+}
+
+h5{
+    
+    font-family: 'Oswald', sans-serif;
+    color: aliceblue;
+    font-size: larger;
 }
