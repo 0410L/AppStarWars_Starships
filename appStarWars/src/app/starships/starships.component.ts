@@ -1,5 +1,6 @@
 import { StarshipsService } from '../starships.service';
 import { Component, OnInit } from '@angular/core';
+import { Starships } from '../starships.interface';
 
 @Component({
   selector: 'app-starships',
@@ -7,14 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./starships.component.css']
 })
 export class StarshipsComponent implements OnInit {
-  
-  constructor (private StarshipsService: StarshipsService){}
-
 
   get mostrar (){
-    
-    return this.StarshipsService.mostrar;
+    return this.starshipsService.mostrar;
   }
+
+  get mostrar2 (){
+    return this.starshipsService.mostrar2;
+  }
+
+  get mostrar3 (){
+    return this.starshipsService.mostrar3;
+  }
+
+  verNaves(index: number, arrayNaves: number) {
+    console.log('index de la nave llamada: ', index);
+    this.starshipsService.fichaNaves(index, arrayNaves);
+  }
+
+  masNaves() {
+    this.starshipsService.verlistaNaves();
+
+  }
+
+  
+  constructor (private starshipsService: StarshipsService){}
 
 
   ngOnInit(): void {

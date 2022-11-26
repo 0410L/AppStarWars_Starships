@@ -2,13 +2,16 @@
 <body class="background container-fluid d-flex bg-dark text-start pt-3" style="width: 99,9vw; height:100%; margin: 0; padding: 0;
     background-size:auto; background-repeat: repeat; background-position: center center; overflow: hidden;">
 
-    <div class="container mt-4">
+    <div class="container">
 
+
+
+        <!-- PRIMERA PAGINA -->
         <div *ngIf="mostrar" class="row d-flex justify-content-center text-start mb-3">
 
-            <div *ngFor="let naves of mostrar.results" class="col-8"> 
+            <div *ngFor="let naves of mostrar; let i = index" class="col-8"> 
 
-                    <div class="card-body rounded border border-white">
+                    <div class="card-body rounded border border-white" style="cursor: pointer" (click)="verNaves(i, 1)">
                         <!--MUESTRA TITULO NAVES-->
                         <p class="card-title">
                             {{ naves.name }}  
@@ -22,10 +25,69 @@
                 <br>
             </div>
         </div>
+
+
+
+        <!-- SEGUNDA PAGINA -->
+        <div *ngIf="mostrar2" class="row d-flex justify-content-center text-start mb-3">
+
+            <div *ngFor="let naves of mostrar2; let i = index" class="col-8"> 
+
+                    <div class="card-body rounded border border-white" style="cursor: pointer" (click)="verNaves(i, 2)">
+                        <!--MUESTRA TITULO NAVES-->
+                        <p class="card-title">
+                            {{ naves.name }}  
+                        </p>
+                        <!--MUESTRA TITULO MODELO NAVES-->
+                        <p class="card-model">
+                            {{ naves.model }}
+                        </p>
+                    </div>
+            
+                <br>
+            </div>
+        </div>
+
+
+
+
+        
+        <!-- TERCERA PAGINA -->
+        <div *ngIf="mostrar3" class="row d-flex justify-content-center text-start mb-3">
+
+            <div *ngFor="let naves of mostrar3; let i = index" class="col-8"> 
+
+                    <div class="card-body rounded border bg-dark border-white" style="cursor: pointer" (click)="verNaves(i, 3)">
+                        <!--MUESTRA TITULO NAVES-->
+                        <p class="card-title">
+                            {{ naves.name }}  
+                        </p>
+                        <!--MUESTRA TITULO MODELO NAVES-->
+                        <p class="card-model">
+                            {{ naves.model }}
+                        </p>
+                    </div>
+            
+                <br>
+            </div>
+        </div>
+
+
+
+
+
+        <!--BOTON DE VIEW MORE-->
+
+
+        <div class="mb-5">
+            <button *ngIf="mostrar3.length < 1" (click)="masNaves()" class="view btn text-light mt-3 mb-5 rounded border bg-dark border-white justify-content-center text-center">View More</button>
+        </div>
+
+
     </div>
 
-
-   
+    <p>
+    </p>
 </body>
 
 

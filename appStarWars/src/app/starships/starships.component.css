@@ -8,6 +8,7 @@
     font-family: 'Oswald', sans-serif;
     overflow-x: hidden;
     letter-spacing: 1px;
+    background-color: transparent;
 }
 
 .background {
@@ -28,3 +29,53 @@ p{
     text-align: center;
     justify-content: center;
 }
+
+.card-body{
+    background-color: black;
+}
+
+.card-body:hover{
+    background-color: rgb(19, 5, 53);
+    box-shadow: 0 6px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+.card-body:hover{
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+/*
+.card-title:hover{
+    color: blanchedalmond;
+}
+*/
+
+
+.view {
+    color: grey;
+    background-color: black;
+}
+
+.view {
+    background-color: black;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+/*
+.navbar-dark .navbar-nav .nav-link.active{
+    color: grey;
+}
+
+.navbar-dark .navbar-nav .nav-link.active:hover{
+    color: blanchedalmond;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link.active:hover{
+    box-shadow: none;
+    transition: none;
+}
+*/

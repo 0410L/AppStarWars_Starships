@@ -3,7 +3,6 @@
     font-size: smaller;
     color: grey;
     letter-spacing: 1px;
-    background-color: black;
 }
 
 footer{
@@ -15,8 +14,13 @@ footer{
     background-color: black;
     padding-top: 10px;
     padding-bottom: 10px;
+    
 }
 
+
+.textfooter{
+    background-color: transparent;
+}
 
 @media screen and (max-width: 992px){
     overflow-x: hidden;

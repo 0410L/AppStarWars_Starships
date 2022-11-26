@@ -1,6 +1,7 @@
 .background {
     background-image: url("/../../assets/background.jpeg");
     overflow-x: hidden;
+    background-color: black;
 }
 
 *{

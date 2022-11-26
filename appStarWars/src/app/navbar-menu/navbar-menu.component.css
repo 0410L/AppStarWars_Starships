@@ -7,11 +7,16 @@
 
 }
 
+.lgsu{
+    background-color: transparent;
+}
+
 .navbar{
     
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     padding: 0;
+    background-color: black;
 }
 
 a.nav-link.active {
@@ -73,6 +78,7 @@ a.nav-link.active:hover {
 
 button{
     color: aliceblue;
+    background-color: transparent;
 }
 
 .centrado{
@@ -121,10 +127,6 @@ button:hover{
         src: url("/../../assets/logo_horizontal.png");
     }
 
-    .navbar-dark .navbar-nav .nav-link.active:hover{
-        box-shadow: none;
-        transition: none;
-    }
 
 }
 
