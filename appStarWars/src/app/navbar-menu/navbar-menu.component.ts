@@ -1,3 +1,4 @@
+import { StarshipsService } from './../starships.service';
 import { StarshipsComponent } from './../starships/starships.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,15 +11,18 @@ import { Router } from '@angular/router';
 export class NavbarMenuComponent implements OnInit {
   [x: string]: any;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private StarshipsService: StarshipsService) {}
 
   navegarHome(){
     this.router.navigate(['home']);
   }
   
+  ngOnInit(): void {
+  }
   
   navegarStarships(){
     this.router.navigate(['starships']);
+    this.StarshipsService.verlistaNaves();
     //window.stop()
   }
 
@@ -36,8 +40,7 @@ export class NavbarMenuComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-  }
+
 
 }
 

@@ -22,3 +22,32 @@ h5{
     color: aliceblue;
     font-size: larger;
 }
+
+
+.jedi {
+    color: grey;
+    background-color: black;
+
+}
+
+.jedi:hover {
+    color: blanchedalmond;
+    background-color: black;
+    box-shadow: 0 8px 30px rgb(3, 211, 3);
+    transition: all 0.2s ease;
+
+}
+
+.sith {
+    color: grey;
+    background-color: black;
+
+}
+
+.sith:hover {
+    color: blanchedalmond;
+    background-color: black;
+    box-shadow: 0 8px 30px rgb(223, 0, 0);
+    transition: all 0.2s ease;
+
+}
