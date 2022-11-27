@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ListadoComponent } from './listado/listado.component';
+import { CardStarshipsComponent } from './card-starships/card-starships.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListadoComponent } from './listado/listado.component';
     FooterComponent,
     PageNotFoundComponent,
     WelcomeComponent,
-    ListadoComponent
+    ListadoComponent,
+    CardStarshipsComponent
   ],
   imports: [
     BrowserModule,

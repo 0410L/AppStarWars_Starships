@@ -12,8 +12,8 @@ export class StarshipsService {
   public mostrar2: Result []=[];
   public mostrar3: Result []=[];
   public navesDirect: any;
-  public idNave: number = 0;
-  public urlImagen: string = "";
+  public idDeNaves: number = 0;
+  public urlImage: string = "";
 
   constructor( private http: HttpClient) {
     /*this.verlistaNaves();*/
@@ -45,8 +45,8 @@ fichaNaves(index: number, arrayNaves: number){
   else this.navesDirect = this.mostrar[index];
   console.log('Nave desde Servicio', this.navesDirect);
   //Obtención id nave a través del parámetro url del objeto
-  this.idNave = this.navesDirect.url.replace(/[^0-9]+/g, '');
-  console.log('ID nave llamada: ', this.idNave);
+  this.idDeNaves = this.navesDirect.url.replace(/[^0-9]+/g, '');
+  console.log('ID nave llamada: ', this.idDeNaves);
 }
 
 

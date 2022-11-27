@@ -1,0 +1,32 @@
+<!--<p>card-starships works!</p>-->
+<!--Ficha de Cada Nave-->
+
+<div class="container d-flex justifiy-content-center">
+
+    <div class="card text-light bg-black" style="max-width:900px;">
+        <img src="{{urlImage}}{{idDeNaves}}.jpg" class="card-img-top img-fluid w-100" alt="{{cardNave.name}}" style="border-bottom: 2px solid rgb(235, 19, 19)">
+
+        <div class="card-body m-1">
+            <span class="card-title">{{cardNave.name}}</span>
+            <span class="card-text"></span>
+            <div class="row m-1">
+                <div class="col-6">
+                    <span class="card-text">Model: {{cardNave.model}} </span>
+                    <p></p>
+                    <span class="card-text">Cost in credits: {{cardNave.cost_in_credits}} </span>
+                    <p></p>
+                    <span class="card-text">Atmospheric Speed: {{cardNave.max_atmosphering_speed}} </span>
+                </div>
+
+                <div class="col-6">
+                    <span class="card-text">Manufacturer: {{cardNave.manufacturer}} </span>
+                    <p></p>
+                    <span class="card-text">Length: {{cardNave.length}}</span>
+                    <p></p>
+                    <span class="card-text">Crew: {{cardNave.crew}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

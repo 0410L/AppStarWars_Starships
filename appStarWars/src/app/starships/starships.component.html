@@ -1,10 +1,16 @@
 <!--<p>starships works!</p>-->
+
+<!--<app-card-starships *ngIf="navegacionFichaNaves"></app-card-starships>-->
+
 <body class="background container-fluid d-flex bg-dark text-start pt-3" style="width: 99,9vw; height:100%; margin: 0; padding: 0;
     background-size:auto; background-repeat: repeat; background-position: center center; overflow: hidden;">
+    <!--*ngIf ="!navegacionFichaNaves">-->
+    <div class="container justify-content-center">
+        <app-card-starships></app-card-starships>
+    </div>
+
 
     <div class="container">
-
-
 
         <!-- PRIMERA PAGINA -->
         <div *ngIf="mostrar" class="row d-flex justify-content-center text-start mb-3">
@@ -57,7 +63,7 @@
 
             <div *ngFor="let naves of mostrar3; let i = index" class="col-8"> 
 
-                    <div class="card-body rounded border bg-dark border-white" style="cursor: pointer" (click)="verNaves(i, 3)">
+                    <div class="card-body rounded border border-white" style="cursor: pointer" (click)="verNaves(i, 3)">
                         <!--MUESTRA TITULO NAVES-->
                         <p class="card-title">
                             {{ naves.name }}  
