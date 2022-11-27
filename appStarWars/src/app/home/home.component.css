@@ -1,15 +1,15 @@
-.background {
+/*body {
     background-image: url("/../../assets/background.jpeg");
     overflow-x: hidden;
     background-color: black;
-}
+}*/
 
 *{
+    background-image: url("/../../assets/background.jpeg");
     text-align: center;
     justify-content: center;
     color: aliceblue;
     font-family: Roboto;
     font-size: medium;
-    background-color:transparent;
-
+    background-color: black;
 }

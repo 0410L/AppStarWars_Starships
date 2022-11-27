@@ -5,17 +5,38 @@
 <body class="background container-fluid d-flex bg-dark text-start pt-3" style="width: 99,9vw; height:100%; margin: 0; padding: 0;
     background-size:auto; background-repeat: repeat; background-position: center center; overflow: hidden;">
     <!--*ngIf ="!navegacionFichaNaves">-->
-    <div class="container justify-content-center">
+    <!--<div class="container justify-content-center">
         <app-card-starships></app-card-starships>
-    </div>
+    </div>-->
 
 
     <div class="container">
 
+
+        <div class="col-sm justify-content-center">
+  
+        <!-- PANTALLLA MODAL QUE MUESTRA LA FICHA DE CADA NAVE -->
+  
+            <div class="modal" (click)="showModal=false" tabindex="-1"[ngClass]="{'show':showModal}">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-body rounded">
+                            <app-card-starships></app-card-starships>
+                         </div>
+                         
+                        <!--<span class="textosalida text-white fw-lighter justifiy-content-center">*pulsa para salir*</span>-->
+                    </div>
+               </div>
+            </div>
+
+
+
+
+
         <!-- PRIMERA PAGINA -->
         <div *ngIf="mostrar" class="row d-flex justify-content-center text-start mb-3">
 
-            <div *ngFor="let naves of mostrar; let i = index" class="col-8"> 
+            <div *ngFor="let naves of mostrar; let i = index" class="col-8" (click)="showModal=true" data-toggle="modal" data-target="#myModal"> 
 
                     <div class="card-body rounded border border-white" style="cursor: pointer" (click)="verNaves(i, 1)">
                         <!--MUESTRA TITULO NAVES-->
@@ -37,7 +58,7 @@
         <!-- SEGUNDA PAGINA -->
         <div *ngIf="mostrar2" class="row d-flex justify-content-center text-start mb-3">
 
-            <div *ngFor="let naves of mostrar2; let i = index" class="col-8"> 
+            <div *ngFor="let naves of mostrar2; let i = index" class="col-8" (click)="showModal=true" data-toggle="modal" data-target="#myModal"> 
 
                     <div class="card-body rounded border border-white" style="cursor: pointer" (click)="verNaves(i, 2)">
                         <!--MUESTRA TITULO NAVES-->
@@ -61,7 +82,7 @@
         <!-- TERCERA PAGINA -->
         <div *ngIf="mostrar3" class="row d-flex justify-content-center text-start mb-3">
 
-            <div *ngFor="let naves of mostrar3; let i = index" class="col-8"> 
+            <div *ngFor="let naves of mostrar3; let i = index" class="col-8" (click)="showModal=true" data-toggle="modal" data-target="#myModal"> 
 
                     <div class="card-body rounded border border-white" style="cursor: pointer" (click)="verNaves(i, 3)">
                         <!--MUESTRA TITULO NAVES-->
@@ -94,6 +115,7 @@
 
     <p>
     </p>
+    </div>
 </body>
 
 

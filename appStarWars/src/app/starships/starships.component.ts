@@ -1,6 +1,7 @@
 import { StarshipsService } from '../starships.service';
 import { Component, OnInit } from '@angular/core';
 import { Starships } from '../starships.interface';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-starships',
@@ -8,6 +9,9 @@ import { Starships } from '../starships.interface';
   styleUrls: ['./starships.component.css']
 })
 export class StarshipsComponent implements OnInit {
+
+
+  showModal: any;
 
   get mostrar (){
     return this.starshipsService.mostrar;
@@ -42,6 +46,7 @@ export class StarshipsComponent implements OnInit {
   
   constructor (private starshipsService: StarshipsService){}
 
+  load: boolean = false;
 
   ngOnInit(): void {
     

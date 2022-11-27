@@ -14,10 +14,12 @@ export class CardStarshipsComponent implements OnInit {
   public urlImage: string = 'https://starwars-visualguide.com/assets/img/starships/';
 
   get cardNave () {
+    //console.log(this.cardNave)
     return this.starshipsService.navesDirect;
   }
 
   get idDeNaves () {
+    //console.log(this.idDeNaves)
     return this.starshipsService.idDeNaves
   }
 

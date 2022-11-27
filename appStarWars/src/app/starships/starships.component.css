@@ -47,6 +47,11 @@ p{
     transition: all 0.2s ease;
 }
 
+.card-body:active{
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 175, 228);
+}
+
 /*
 .card-title:hover{
     color: blanchedalmond;
@@ -81,3 +86,33 @@ p{
     transition: none;
 }
 */
+
+
+.modal.show{
+    display: block;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+.button{
+    margin: 0;
+    padding: 0;
+}
+
+.label{
+    justify-content: center;
+    text-align: center;
+}
+
+.desplegablePanel{
+    text-align: center;
+}
+
+.input{
+    text-align: center;
+}
+
+.textosalida {
+    font-style: italic;
+    font-family: Roboto;
+    font-size: small;
+}

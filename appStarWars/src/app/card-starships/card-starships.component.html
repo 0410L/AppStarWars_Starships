@@ -4,27 +4,29 @@
 <div class="container d-flex justifiy-content-center">
 
     <div class="card text-light bg-black" style="max-width:900px;">
-        <img src="{{urlImage}}{{idDeNaves}}.jpg" class="card-img-top img-fluid w-100" alt="{{cardNave.name}}" style="border-bottom: 2px solid rgb(235, 19, 19)">
+        <img class="sw card-img-top img-fluid" style="border-bottom: 2px solid rgb(79, 179, 250, 0.913);" alt="{{cardNave.name}} image not founded" src="{{urlImage}}{{idDeNaves}}.jpg">
 
-        <div class="card-body m-1">
-            <span class="card-title">{{cardNave.name}}</span>
-            <span class="card-text"></span>
-            <div class="row m-1">
-                <div class="col-6">
+        <div class="card-body m-0 justifiy-content-center">
+            <div class="titulo card-title fw-bolder">{{cardNave.name}}</div>
+            <span class="card-text">{{cardNave.starship_class}}</span>
+            <p></p>
+            <div class="row">
+                <div class="col-12">
                     <span class="card-text">Model: {{cardNave.model}} </span>
-                    <p></p>
+                    <br>
                     <span class="card-text">Cost in credits: {{cardNave.cost_in_credits}} </span>
-                    <p></p>
+                    <br>
                     <span class="card-text">Atmospheric Speed: {{cardNave.max_atmosphering_speed}} </span>
+                    <br>
+                    <span class="card-text">Manufacturer: {{cardNave.manufacturer}} </span>
+                    <br>
+                    <span class="card-text">Length: {{cardNave.length}}</span>
+                    <br>
+                    <span class="card-text">Crew: {{cardNave.crew}}</span>
+
                 </div>
 
-                <div class="col-6">
-                    <span class="card-text">Manufacturer: {{cardNave.manufacturer}} </span>
-                    <p></p>
-                    <span class="card-text">Length: {{cardNave.length}}</span>
-                    <p></p>
-                    <span class="card-text">Crew: {{cardNave.crew}}</span>
-                </div>
+                
             </div>
         </div>
     </div>
