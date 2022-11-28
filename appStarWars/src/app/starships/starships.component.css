@@ -37,6 +37,8 @@ p{
 }
 
 .card-body:hover{
+    
+    border-bottom: 6px solid rgb(79, 179, 250, 0.913);
     background-color: rgb(5, 31, 53);
     box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
     transition: all 0.2s ease;
@@ -48,6 +50,11 @@ p{
 }
 
 .card-body:active{
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 175, 228);
+}
+
+.card-body:visited{
     color: rgb(0, 0, 0);
     background-color: rgb(0, 175, 228);
 }
@@ -94,6 +101,7 @@ p{
     animation-duration: 0.2s;
     background-color: rgb(0, 0, 0, .5);
     box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    backdrop-filter: blur(2px);
 }
 
 @keyframes show {

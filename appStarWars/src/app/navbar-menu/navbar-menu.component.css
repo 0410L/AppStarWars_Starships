@@ -28,6 +28,10 @@ a.nav-link.active:hover {
     color:blanchedalmond
 }
 
+a.nav-link.active:hover {
+    color:blanchedalmond
+}
+
 .nav-item{
     border-left: 1px solid grey;
     background-color: transparent;
@@ -55,6 +59,7 @@ a.nav-link.active:hover {
 
 .navbar-dark .navbar-nav .nav-link.active:hover{
     color: blanchedalmond;
+    /*border-bottom: 1px solid rgb(79, 179, 250, 0.913);*/
     box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
     transition: all 0.2s ease;
 }
