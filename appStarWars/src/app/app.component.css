@@ -6,6 +6,7 @@ app-navbar-menu {position: sticky;top: 0;}
 *{
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
+    background-image: url("/../../assets/background.jpeg");
 }
 
 h2{

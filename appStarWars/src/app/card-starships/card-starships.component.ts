@@ -10,8 +10,9 @@ import { StarshipsService } from '../starships.service';
 export class CardStarshipsComponent implements OnInit {
 
   constructor (private starshipsService: StarshipsService){}
-
-  public urlImage: string = 'https://starwars-visualguide.com/assets/img/starships/';
+  //public urlImage: string = 'https://starwars-visualguide.com/assets/img/starships/';
+  //public urlImage: string = '/../../starships/starships.json/';
+  public urlImage: string = '/../../assets/starships/';
 
   get cardNave () {
     //console.log(this.cardNave)

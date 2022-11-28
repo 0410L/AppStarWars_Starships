@@ -26,12 +26,6 @@ export class StarshipsComponent implements OnInit {
     return this.starshipsService.mostrar3;
   }
 
-  startFicha() {
-    this.navegacionFichaNaves = !this.navegacionFichaNaves;
-  }
-  navegacionFichaNaves:boolean = (false);
-
-
 
   verNaves(index: number, arrayNaves: number) {
     console.log('index de la nave llamada: ', index);

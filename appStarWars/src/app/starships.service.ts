@@ -14,6 +14,7 @@ export class StarshipsService {
   public navesDirect: any;
   public idDeNaves: number = 0;
   public urlImage: string = "";
+  public img!: string;
 
   constructor( private http: HttpClient) {
     /*this.verlistaNaves();*/

@@ -130,4 +130,6 @@ p{
     font-size: small;
 }
 
-
+.modal-content {
+    box-shadow: 4px 2px 2px 4px rgba(49, 138, 172, 1);
+}
