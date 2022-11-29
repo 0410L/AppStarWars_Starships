@@ -3,18 +3,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-<body class="background container-fluid d-flex bg-dark text-center justify-content-center" style="width: 99,9vw; height:100%; margin: 0; padding: 0;
-    background-size:auto; background-repeat: repeat; background-position: center center; overflow: hidden;">
-      
-  
-   
 
-  <div class="container bg-dark justify-content-center">
+
+
+  <div class="container justify-content-center">
     <div class="row">
-      <div class="col-sm justify-content-center">
-        <div class="register">
-          <form class="custom-form text-center" method="post">
-            <h1>Register</h1>
+      <div class="col-3"></div>
+      <div class="col-6">
+
+        <div class="register justify-content-center bg-dark p-2 rounded">
+          <form class="form-section identity-flow text-center" method="post">
+            <img class="h100 mt-3 mb-3" src="/../../assets/logo login.png" alt="login" style="width: 20vw; height: auto; margin: 0; padding: 0; overflow: hidden; justify-content: center; text-align: center;">
+            <h1>REGISTER</h1>
             <input
               type="email"
               [(ngModel)]="email"
@@ -22,6 +22,7 @@
               placeholder="Email"
               required="required"
             />
+            <p></p>
             <input
               type="password"
               [(ngModel)]="password"
@@ -29,6 +30,7 @@
               placeholder="Password"
               required="required"
             />
+            <p></p>
             <input
               type="password"
               [(ngModel)]="confirmPassword"
@@ -36,10 +38,13 @@
               placeholder="Repeat the password"
               required="required"
             />
-            <button class="btn btn-primary" type="submit" (click)="register()">Register</button>
+            <p></p>
+            <button class="btn btn-primary mb-3" type="submit" (click)="register()">Register</button>
           </form>
         </div>
+
+
       </div>
+      <div class="col-3"></div>
     </div>
   </div>
-</body>

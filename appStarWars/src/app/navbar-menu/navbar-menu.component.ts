@@ -1,3 +1,4 @@
+import { UsersService } from './../users.service';
 import { StarshipsService } from './../starships.service';
 import { StarshipsComponent } from './../starships/starships.component';
 import { Component, OnInit } from '@angular/core';
@@ -10,16 +11,15 @@ import { Router } from '@angular/router';
 })
 export class NavbarMenuComponent implements OnInit {
  
-  showModal : any;
 
-  constructor(private router: Router, private StarshipsService: StarshipsService) {}
+
+  constructor(private router: Router, private StarshipsService: StarshipsService, private UsersService: UsersService) {}
 
   navegarHome(){
     this.router.navigate(['home']);
   }
   
-  ngOnInit(): void {
-  }
+  
   
   navegarStarships(){
     this.router.navigate(['starships']);
@@ -40,7 +40,17 @@ export class NavbarMenuComponent implements OnInit {
     this.router.navigate(['register'])
 
   }
-  load: boolean = false;
+
+  ngOnInit() {
+    this.getUserLogged();
+    
+  }
+  getUserLogged() {
+    this.UsersService.getUser().subscribe(user => {
+    console.log(user)
+    });
+  }
+
 
 
 }

@@ -8,12 +8,13 @@
 
 <div class="container justify-content-center">
   <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">
+    <div class="col-3"></div>
+    <div class="col-6">
 
       <div class="login justify-content-center bg-dark p-2 rounded">
         <form class="form-section identity-flow text-center" method="post">
-          <h1>LOGIN</h1>
+          <img class="h100 mt-3 mb-3" src="/../../assets/logo login.png" alt="login" style="width: 20vw; height: auto; margin: 0; padding: 0; overflow: hidden;">
+          <h1>ENTER</h1>
           <input
             type="email"
             [(ngModel)]="email"
@@ -30,12 +31,12 @@
             required="required"
           />
           <p></p>
-          <button class="btn btn-primary" type="submit" (click)="login()">Log in</button>
+          <button class="btn btn-primary mb-3" type="submit" (click)="login()">Continue</button>
         </form>
       </div>
 
 
     </div>
-    <div class="col-4"></div>
+    <div class="col-3"></div>
   </div>
 </div>

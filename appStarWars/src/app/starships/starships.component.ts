@@ -12,10 +12,11 @@ export class StarshipsComponent implements OnInit {
 
 
   showModal: any;
+  page: any;
+  fichaNaves: Starships[]=[];
 
   get mostrar (){
     return this.starshipsService.mostrar;
-    
   }
 
   get mostrar2 (){
@@ -36,6 +37,12 @@ export class StarshipsComponent implements OnInit {
     this.starshipsService.verlistaNaves();
 
   }
+  /*
+  fichaMovies(index: number, arrayNaves: number) {
+    console.log('index de la peli llamada: ', index);
+    this.starshipsService.fichaMovies(index, arrayNaves);
+  }
+  */
 
   
   constructor (private starshipsService: StarshipsService){}

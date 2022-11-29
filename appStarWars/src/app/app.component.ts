@@ -1,4 +1,4 @@
-import { UsersService } from './users.service';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -18,19 +18,12 @@ export class AppComponent implements OnInit {
   navegacionweb:boolean = (false); //funció "boolean" / "false" per amagar el contingut de 'pantallaPrincipal'
   
   
-  constructor(private router: Router, public UsersService: UsersService) {
+  constructor(private router: Router) {
     this.router.navigate(['home'])
   }
   
   ngOnInit() {
-    this.getUserLogged();
     
   }
-  getUserLogged() {
-    this.UsersService.getUser().subscribe(user => {
-    console.log(user)
-    });
-  }
-
 
 }

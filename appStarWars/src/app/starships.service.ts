@@ -1,19 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Starships, Result } from './starships.interface';
+import { Film } from './starships.interface'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StarshipsService {
 
+
   public page: number = 1;
+  public movie: number = 1;
   public mostrar: Result []=[];
   public mostrar2: Result []=[];
   public mostrar3: Result []=[];
   public navesDirect: any;
   public idDeNaves: number = 0;
   public urlImage: string = "";
+  public urlImagePilots: string = "";
+  public idDeMovies: number = 0;
+  public urlImageMovies: string ="";
+  public idDePilot: number = 0;
   public img!: string;
 
   constructor( private http: HttpClient) {
@@ -37,7 +45,7 @@ verlistaNaves() {
     /*console.log(this.mostrar);*/
   });
 }
-
+ 
 /*lanzar listado y obtener id de la nave*/
 
 fichaNaves(index: number, arrayNaves: number){
@@ -47,10 +55,26 @@ fichaNaves(index: number, arrayNaves: number){
   console.log('Nave desde Servicio', this.navesDirect);
   //Obtención id nave a través del parámetro url del objeto
   this.idDeNaves = this.navesDirect.url.replace(/[^0-9]+/g, '');
-  console.log('ID nave llamada: ', this.idDeNaves);
+  this.idDeMovies = this.navesDirect.url.replace(/[^0-9]+/g, '');
+  this.idDePilot = this.navesDirect.url.replace(/[^0-9]+/g, '');
+  console.log('ID nave llamada: ', this.idDeNaves, this.idDeMovies, this.idDePilot);
+  //console.log('ID nave llamada: ', this.idDeNaves);
+}
+
+/*
+verlistaMovies(id : string): Observable<Film> {
+  return this.http.get<Film>(`https://swapi.dev/api/films/${id}`);
+}
+  
+
+
+fichaMovies(){
+}
+*/
 }
 
 
 
 
-}
+
+

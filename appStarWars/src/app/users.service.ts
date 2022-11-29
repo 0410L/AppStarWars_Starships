@@ -2,11 +2,32 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
+import { EmailValidator } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
+  [x: string]: any;
+
+
+/*
+  grabar_localstorage(){}
+  usuario!: string;
+  email!: string;
+
+  login(){
+    localStorage.setItem("usuario", this.usuario)
+  }
+
+  register(){
+    localStorage.setItem("usuario", this.usuario)
+    localStorage.setItem("email", this.email)
+    
+  }
+*/
+
+
 
   constructor(private http: HttpClient, private cookies: CookieService) { }
 
@@ -32,5 +53,6 @@ export class UsersService {
     const token = this.getToken();
     // Aquí iría el endpoint para devolver el usuario para un token
   }
+
 
 }

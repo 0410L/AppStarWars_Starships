@@ -13,6 +13,8 @@ export class CardStarshipsComponent implements OnInit {
   //public urlImage: string = 'https://starwars-visualguide.com/assets/img/starships/';
   //public urlImage: string = '/../../starships/starships.json/';
   public urlImage: string = '/../../assets/starships/';
+  public urlImageMovies: string = 'https://starwars-visualguide.com/assets/img/films/';
+  public urlImagePilots: string = '/../../assets/pilots/';
 
   get cardNave () {
     //console.log(this.cardNave)
@@ -23,6 +25,17 @@ export class CardStarshipsComponent implements OnInit {
     //console.log(this.idDeNaves)
     return this.starshipsService.idDeNaves
   }
+
+  get idDeMovies () {
+    //console.log(this.idDeNaves)
+    return this.starshipsService.idDeMovies
+  }
+
+  get idDePilot () {
+    //console.log(this.idDeNaves)
+    return this.starshipsService.idDeMovies
+  }
+
 
   ngOnInit(): void {
     

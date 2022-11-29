@@ -10,7 +10,7 @@ export class RegisterComponent {
   email!: string;
   password!: string;
   confirmPassword!: string;
-  passwordError!: boolean
+  passwordError!: boolean;
 
   constructor(public UsersService: UsersService) {}
 
