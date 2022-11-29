@@ -21,6 +21,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
     "jquery": "^3.6.1",
+    "ngx-cookie-service": "^15.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.4.1",
     "zone.js": "~0.12.0"

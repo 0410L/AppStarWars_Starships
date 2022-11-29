@@ -1,0 +1,45 @@
+<!--<p>register works!</p>-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+<body class="background container-fluid d-flex bg-dark text-center justify-content-center" style="width: 99,9vw; height:100%; margin: 0; padding: 0;
+    background-size:auto; background-repeat: repeat; background-position: center center; overflow: hidden;">
+      
+  
+   
+
+  <div class="container bg-dark justify-content-center">
+    <div class="row">
+      <div class="col-sm justify-content-center">
+        <div class="register">
+          <form class="custom-form text-center" method="post">
+            <h1>Register</h1>
+            <input
+              type="email"
+              [(ngModel)]="email"
+              name="email"
+              placeholder="Email"
+              required="required"
+            />
+            <input
+              type="password"
+              [(ngModel)]="password"
+              name="password"
+              placeholder="Password"
+              required="required"
+            />
+            <input
+              type="password"
+              [(ngModel)]="confirmPassword"
+              name="password"
+              placeholder="Repeat the password"
+              required="required"
+            />
+            <button class="btn btn-primary" type="submit" (click)="register()">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

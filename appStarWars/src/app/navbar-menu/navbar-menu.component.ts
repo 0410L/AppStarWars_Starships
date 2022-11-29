@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar-menu.component.css']
 })
 export class NavbarMenuComponent implements OnInit {
-  [x: string]: any;
+ 
+  showModal : any;
 
   constructor(private router: Router, private StarshipsService: StarshipsService) {}
 
@@ -32,14 +33,14 @@ export class NavbarMenuComponent implements OnInit {
   }
 
   logIn(){
-
+    this.router.navigate(['Login'])
   }
 
   signUp(){
+    this.router.navigate(['register'])
 
   }
-
-
+  load: boolean = false;
 
 
 }

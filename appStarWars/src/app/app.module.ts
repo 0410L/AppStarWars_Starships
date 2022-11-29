@@ -1,7 +1,8 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StarshipsComponent } from './starships/starships.component';
@@ -11,6 +12,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ListadoComponent } from './listado/listado.component';
 import { CardStarshipsComponent } from './card-starships/card-starships.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -22,14 +26,18 @@ import { CardStarshipsComponent } from './card-starships/card-starships.componen
     PageNotFoundComponent,
     WelcomeComponent,
     ListadoComponent,
-    CardStarshipsComponent
+    CardStarshipsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

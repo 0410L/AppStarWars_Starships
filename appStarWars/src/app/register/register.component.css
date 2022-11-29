@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+    font-size: small;
+    letter-spacing: 1px;
+    /*background-image: url("/../../assets/background.jpeg");*/
+
+}

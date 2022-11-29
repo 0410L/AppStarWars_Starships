@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { UsersService } from './users.service';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'appStarWars';
 
 
@@ -17,11 +18,19 @@ export class AppComponent {
   navegacionweb:boolean = (false); //funció "boolean" / "false" per amagar el contingut de 'pantallaPrincipal'
   
   
-  constructor(private router: Router) {
+  constructor(private router: Router, public UsersService: UsersService) {
     this.router.navigate(['home'])
   }
   
-
+  ngOnInit() {
+    this.getUserLogged();
+    
+  }
+  getUserLogged() {
+    this.UsersService.getUser().subscribe(user => {
+    console.log(user)
+    });
+  }
 
 
 }
