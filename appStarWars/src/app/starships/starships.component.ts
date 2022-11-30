@@ -1,7 +1,11 @@
+import { Router } from '@angular/router';
+import { SignupComponent } from './../signup/signup.component';
+import { UsersService } from './../users.service';
 import { StarshipsService } from '../starships.service';
 import { Component, OnInit } from '@angular/core';
 import { Starships } from '../starships.interface';
 import { FormControl } from '@angular/forms';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-starships',
@@ -29,7 +33,7 @@ export class StarshipsComponent implements OnInit {
 
 
   verNaves(index: number, arrayNaves: number) {
-    console.log('index de la nave llamada: ', index);
+    console.log('index naves', index);
     this.starshipsService.fichaNaves(index, arrayNaves);
   }
 
@@ -45,12 +49,31 @@ export class StarshipsComponent implements OnInit {
   */
 
   
-  constructor (private starshipsService: StarshipsService){}
+  /*constructor (private starshipsService: StarshipsService){}
 
   load: boolean = false;
 
   ngOnInit(): void {
     
+  }*/
+
+  constructor (private starshipsService: StarshipsService, private usersService: UsersService, private router: Router){}
+
+  load: boolean = false;
+
+  ngOnInit(): void {
+
+     this.usersService.checkLoginControl();
+     this.usersService.getUserNameLogFromLS('userNameLog');
+     if (!this.usersService.loginControl) {
+       swal.fire({icon:'error',title:'You must be logged in to access this area!', text:'please, go to login or signup', timer: 3000, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
+       this.router.navigate(['home'])
+       //this.signupComponent.signupModal.open(abrirModal);
+       return;
+     } else {
+       this.starshipsService.clean();
+       this.masNaves();
+     }
   }
 
 }

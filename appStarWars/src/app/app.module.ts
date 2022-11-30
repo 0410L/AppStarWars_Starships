@@ -15,6 +15,8 @@ import { CardStarshipsComponent } from './card-starships/card-starships.componen
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CookieService } from 'ngx-cookie-service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { CookieService } from 'ngx-cookie-service';
     CardStarshipsComponent,
     LoginComponent,
     RegisterComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

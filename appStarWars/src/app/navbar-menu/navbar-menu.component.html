@@ -3,13 +3,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
+<!--MARCA DE REGISTRO LOGOUT Y NOMBRE DE USUARIO-->
+<!--<div class="col-3">
+  <div *ngIf="!loginControl" class="d-flex justify-content-end me-5 pe-5">
+    <app-login routerLink="home"></app-login>
+    <div class="mx-4">//</div>
+    <app-signup routerLink="home"></app-signup>
+  </div>
+  <div *ngIf="loginControl" class="d-flex justify-content-end me-5 pe-5">
+    <p type="button" (click)="logout()" routerLink="home">LOG OUT</p>
+  </div>
+  <div class="row d-flex justify-content-end mt-3 pt-1 me-5 pe-5">
+    Welcome, {{ userLogged }}
+  </div>
+</div>-->
 
 
 <!--LOGO GRANDE STAR WARS (aparece desde el inicio hasta que la pantalla se hace pequeña 'lg')-->
 <div class="contenedor col logo bg-black text-center pt-3 pb-3 sticky d-none d-lg-flex">
     <img src="/../../assets/logo.png" class="logotipo" (click)="navegarWelcome()" style="width: 10%;">
-    <div class="centrado d-none d-lg-flex">
-      <button class="button"(click)="logIn()">LOG IN</button><button class="button" (click)="signUp()">SIGN UP</button>
+    <div class="row centrado d-none d-lg-flex">
+        <div *ngIf="!loginControl" class="link col d-flex justify-content-end me-5 m-0 p-0">
+          <app-login routerLink="home"></app-login>
+          <div class="mx-1"></div>
+          <app-signup routerLink="home"></app-signup>
+        </div>
+
+        <div *ngIf="loginControl" class="col d-flex justify-content-end me-5 pe-5">
+          <p type="button" (click)="logout()" routerLink="home">LOG OUT</p>
+        </div>
+        <div class="connect row d-flex justify-content-end pt-1 me-5 pe-5">
+          <!--Welcome, {{ userLogged }}-->
+        </div>
+      <!--<button class="button"(click)="logIn()">LOG IN</button><button class="button" (click)="signUp()">SIGN UP</button>-->
     </div>
 </div>
 
@@ -18,7 +44,7 @@
 <div class="contenedor col logo bg-black text-center pt-3 pb-3 sticky d-lg-none">
   <img src="/../../assets/logoh.png" class="logotipo" (click)="navegarHome()" style="width: 20%;">
   <div class="centrado d-none d-lg-flex">
-    <button class="button lgsu"(click)="logIn()" >LOG IN</button><button class="button lgsu"(click)="signUp()">SIGN UP</button>
+    <!--<button class="button lgsu"(click)="logIn()" >LOG IN</button><button class="button lgsu"(click)="signUp()">SIGN UP</button>-->
   </div>
 </div>
 
@@ -42,16 +68,16 @@
           
 <!--BOTON STARSHIPS-->
           <li class="nav-item text-center starshiptroopers">
-            <a class="nav-link active" (click)="navegarStarships()" style="justify-content: center"  aria-current="page"> STARSHIPS </a>
+            <a class="nav-link active" (click)="navegarStarships()" style="justify-content: center" aria-current="page"> STARSHIPS </a>
           </li>
 
-          <li class="nav-item text-center d-lg-none">
+          <!--<li class="nav-item text-center d-lg-none">
             <a class="nav-link active" (click)="logIn()" style="justify-content: center"  aria-current="page"> LOG IN </a>
-          </li>
+          </li>-->
 
-          <li class="nav-item text-center d-lg-none">
+          <!--<li class="nav-item text-center d-lg-none">
             <a class="nav-link active" (click)="signUp()" style="justify-content: center"  aria-current="page"> SIGN UP </a>
-          </li>
+          </li>-->
 
         </ul>
       </div>

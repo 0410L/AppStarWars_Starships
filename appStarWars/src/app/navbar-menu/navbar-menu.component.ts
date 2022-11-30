@@ -1,3 +1,4 @@
+import { LoginComponent } from './../login/login.component';
 import { UsersService } from './../users.service';
 import { StarshipsService } from './../starships.service';
 import { StarshipsComponent } from './../starships/starships.component';
@@ -13,17 +14,16 @@ export class NavbarMenuComponent implements OnInit {
  
 
 
-  constructor(private router: Router, private StarshipsService: StarshipsService, private UsersService: UsersService) {}
+  constructor(private router: Router, private starshipsService: StarshipsService, private usersService: UsersService) {}
 
   navegarHome(){
     this.router.navigate(['home']);
   }
   
   
-  
   navegarStarships(){
     this.router.navigate(['starships']);
-    this.StarshipsService.verlistaNaves();
+    this.starshipsService.verlistaNaves();
     //window.stop()
   }
 
@@ -33,23 +33,38 @@ export class NavbarMenuComponent implements OnInit {
   }
 
   logIn(){
-    this.router.navigate(['Login'])
+    return this.usersService.loginControl;
   }
 
   signUp(){
-    this.router.navigate(['register'])
+    this.router.navigate(['login'])
 
   }
 
-  ngOnInit() {
-    this.getUserLogged();
-    
+  get userLogged() {
+    return this.usersService.loggedUser;
+   }
+ 
+   get loginControl() {
+     return this.usersService.loginControl;
+}
+
+listadoNaves() {
+  this.starshipsService.verlistaNaves();
+}
+
+logout() {
+  this.usersService.logout();
+}
+
+  ngOnInit():void {
   }
-  getUserLogged() {
+
+  /*getUserLogged() {
     this.UsersService.getUser().subscribe(user => {
     console.log(user)
     });
-  }
+  }*/
 
 
 

@@ -52,20 +52,27 @@ fichaNaves(index: number, arrayNaves: number){
   if (arrayNaves===2) this.navesDirect = this.mostrar2[index];
   else if (arrayNaves===3) this.navesDirect = this.mostrar3[index];
   else this.navesDirect = this.mostrar[index];
-  console.log('Nave desde Servicio', this.navesDirect);
+  console.log('Nave desde el service', this.navesDirect);
   //Obtención id nave a través del parámetro url del objeto
   this.idDeNaves = this.navesDirect.url.replace(/[^0-9]+/g, '');
   this.idDeMovies = this.navesDirect.url.replace(/[^0-9]+/g, '');
   this.idDePilot = this.navesDirect.url.replace(/[^0-9]+/g, '');
-  console.log('ID nave llamada: ', this.idDeNaves, this.idDeMovies, this.idDePilot);
+  console.log('ID de nave: ', this.idDeNaves, this.idDeMovies, this.idDePilot);
   //console.log('ID nave llamada: ', this.idDeNaves);
+}
+
+clean() {
+  this.page = 1;
+  this.mostrar = []
+  this.page = 1;
 }
 
 /*
 verlistaMovies(id : string): Observable<Film> {
   return this.http.get<Film>(`https://swapi.dev/api/films/${id}`);
 }
-  
+
+
 
 
 fichaMovies(){

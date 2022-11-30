@@ -4,7 +4,24 @@
     font-family: 'Oswald', sans-serif;
     font-size: small;
     letter-spacing: 1px;
+    padding-right: 0;
+    padding-left: 0;
+    padding: 0px 0px;
+    margin: 0px;
+    --bs-gutter-x: 0;
 
+}
+
+
+
+.container{
+    padding-right: 0;
+}
+
+.connect{
+    font-size: 20%;
+    margin: 0;
+    top: 50%;
 }
 
 .lgsu{
@@ -81,6 +98,10 @@ a.nav-link.active:hover {
     text-align: center;
 }
 
+.col{
+    overflow: hidden;
+}
+
 button{
     color: aliceblue;
     background-color: transparent;
@@ -88,10 +109,9 @@ button{
 
 .centrado{
     position: absolute;
-    top: 35%;
+    top: 40%;
     right: 15%;
     color: aliceblue;
-    font-size: medium;
     background-color: transparent;
 }
 

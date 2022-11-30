@@ -13,7 +13,7 @@ export class RegisterComponent {
   passwordError!: boolean;
 
   constructor(public UsersService: UsersService) {}
-
+  /*
   register() {
     const user = { email: this.email, password: this.password };
     this.UsersService.register(user).subscribe(data => {
@@ -22,6 +22,7 @@ export class RegisterComponent {
     });
     //console.log(this.email);
     //console.log(this.password);
-  }
+    
+  }*/
 
 }
