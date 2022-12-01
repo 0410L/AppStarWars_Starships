@@ -3,34 +3,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-<!--MARCA DE REGISTRO LOGOUT Y NOMBRE DE USUARIO-->
-<!--<div class="col-3">
-  <div *ngIf="!loginControl" class="d-flex justify-content-end me-5 pe-5">
-    <app-login routerLink="home"></app-login>
-    <div class="mx-4">//</div>
-    <app-signup routerLink="home"></app-signup>
-  </div>
-  <div *ngIf="loginControl" class="d-flex justify-content-end me-5 pe-5">
-    <p type="button" (click)="logout()" routerLink="home">LOG OUT</p>
-  </div>
-  <div class="row d-flex justify-content-end mt-3 pt-1 me-5 pe-5">
-    Welcome, {{ userLogged }}
-  </div>
-</div>-->
-
 
 <!--LOGO GRANDE STAR WARS (aparece desde el inicio hasta que la pantalla se hace pequeña 'lg')-->
 <div class="contenedor col logo bg-black text-center pt-3 pb-3 sticky d-none d-lg-flex">
     <img src="/../../assets/logo.png" class="logotipo" (click)="navegarWelcome()" style="width: 10%;">
+
+<!--BOTON LOGIN Y SIGNUP-->
     <div class="row centrado d-none d-lg-flex">
         <div *ngIf="!loginControl" class="link col d-flex justify-content-end me-5 m-0 p-0">
-          <app-login routerLink="home"></app-login>
-          <div class="mx-1"></div>
-          <app-signup routerLink="home"></app-signup>
+          <app-login class="but" routerLink="home"></app-login>//
+          <app-signup class="but" routerLink="home"></app-signup>
         </div>
 
         <div *ngIf="loginControl" class="col d-flex justify-content-end me-5 pe-5">
-          <p type="button" (click)="logout()" routerLink="home">LOG OUT</p>
+          <p type="button" class="button" (click)="logout()" routerLink="home">LOG OUT</p>
         </div>
         <div class="connect row d-flex justify-content-end pt-1 me-5 pe-5">
           <!--Welcome, {{ userLogged }}-->
@@ -61,15 +47,50 @@
 
         <ul class="navbar-nav bordes">
 
-<!--BOTON HOME-->
-          <li class="nav-item text-center">
+<!--BOTON HOME NAVBAR / DESPLEGABLE-->
+
+          <li class="nav-item text-center d-none d-lg-flex">
+            <a class="nav-link active" (click)="navegarHome()" style="justify-content: center" aria-current="page"> HOME </a>
+          </li>
+
+          <li class="nav-item text-center pb-4 d-lg-none">
             <a class="nav-link active" (click)="navegarHome()" style="justify-content: center" aria-current="page"> HOME </a>
           </li>
           
-<!--BOTON STARSHIPS-->
-          <li class="nav-item text-center starshiptroopers">
+<!--BOTON STARSHIPS NAVBAR / DESPLEGABLE-->
+
+          <li class="nav-item text-center starshiptroopers d-none d-lg-flex">
             <a class="nav-link active" (click)="navegarStarships()" style="justify-content: center" aria-current="page"> STARSHIPS </a>
           </li>
+
+          <li class="nav-item text-center starshiptroopers pb-4 d-lg-none">
+            <a class="nav-link active" (click)="navegarStarships()" style="justify-content: center" aria-current="page"> STARSHIPS </a>
+          </li>
+
+          <div *ngIf="!loginControl" class="link col d-flex justify-content-end me-5 m-0 p-0" class="nav-item text-center d-lg-none">
+
+<!--BOTON LOGIN DESPLEGABLE-->
+
+            <li class="nav-item text-center d-lg-none">
+              <app-login routerLink="home" class="nav-item nav-link active text-center d-lg-none"></app-login>
+            </li>
+
+<!--BOTON SIGNUP DESPLEGABLE-->
+
+            <li class="nav-item text-center d-lg-none">
+            <app-signup routerLink="home" class="nav-item nav-link active text-center d-lg-none"></app-signup>
+            </li>
+          </div>
+
+           <!--<li class="nav-item text-center d-lg-none">
+            <a class="nav-link active" (click)="logIn()" style="justify-content: center"  aria-current="page"> LOG IN </a>
+          </li>-->
+
+          <!--<li class="nav-item text-center d-lg-none">
+            <a class="nav-link active" (click)="signUp()" style="justify-content: center"  aria-current="page"> SIGN UP </a>
+          </li>-->
+
+
 
           <!--<li class="nav-item text-center d-lg-none">
             <a class="nav-link active" (click)="logIn()" style="justify-content: center"  aria-current="page"> LOG IN </a>

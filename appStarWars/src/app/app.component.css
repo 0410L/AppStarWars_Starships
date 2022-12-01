@@ -9,7 +9,7 @@ app-navbar-menu {position: sticky;top: 0;}
     background-image: url("/../../assets/background.jpeg");
 }
 
-h2{
+h3{
     
     font-family: 'Oswald', sans-serif;
     color: aliceblue;
@@ -37,6 +37,7 @@ h5{
     transition: all 0.2s ease;
 
 }
+
 
 .jedi:active {
     color: rgb(0, 0, 0);

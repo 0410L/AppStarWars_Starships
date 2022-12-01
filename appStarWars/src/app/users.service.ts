@@ -18,20 +18,20 @@ export class UsersService {
 
   // Array usuarios de tipo Users
   usersArray: Users[] = [
-    {id: 1, userName: 'Oriol', userEmail: 'oriol.busquet@gmail.com', userPass: '404404',},
+    {id: 1, userName: 'Oriol', userEmail: 'oriol.busquet@gmail.com', userPass: '404404'},
+    {id: 2, userName: 'admin', userEmail: 'admin@admin.admin', userPass: 'admin',},
   ];
 
   // GUARDAR EN LOCALSTORAGE
-
-  saveToLocalStorage(listUsers: Users[]) {
-    localStorage.setItem('listUsers', JSON.stringify(listUsers));
-  }
-
+  
 
   loginControlToLS(loginC: boolean) {
     localStorage.setItem('loginC', JSON.stringify(loginC));
   }
 
+  saveToLocalStorage(listUsers: Users[]) {
+    localStorage.setItem('listUsers', JSON.stringify(listUsers));
+  }
 
 
   // GUARDAR NAME/USER LOGGED
@@ -39,7 +39,6 @@ export class UsersService {
   nameToLS(userNameLog: string) {
     localStorage.setItem('userNameLog', userNameLog);
   }
-
 
 
 
@@ -59,11 +58,13 @@ export class UsersService {
   }
 
 
+
   // IR A USUARIO LOGEADO EN LOCAL
 
   getUserNameLogFromLS(key: string) {
     this.loggedUser = localStorage.getItem(key);
   }
+
 
   // CHECK ESTADO LOGIN (SERVICIO)
 
@@ -71,59 +72,58 @@ export class UsersService {
     this.getLoginControlFromLS('loginC');
   }
 
+
+
+
   // USUARIOS
 
   newUser(userName: string, userEmail: string, userPass: string) {
     console.log('nuevo usuario');
+
     let id = this.contadorID + 1;
     this.contadorID++;
     this.usersArray.push({ id, userName, userEmail, userPass });
     this.saveToLocalStorage(this.usersArray);
-    swal.fire({icon:'success',title: 'Account Created successfully!', timer: 2000, showConfirmButton: false, background: '#fff url(../../assets/dMando.jpg)'})
+    
+    swal.fire({icon:'success',title: 'Account created!',text:'Congratulations', timer: 2000, showConfirmButton: false, background: '#fff url(../../assets/dMando.jpg)'})
+
     console.log('Array Users', this.usersArray);
   }
   
 
   checkLogin(email: string, pass: string) {
     console.log('Dentro servicio CHECK LOGIN');
+
     const user = this.usersArray.find((user) => user.userEmail === email);
     user?.userPass === pass
+
       ? ((this.loginControl = true),
         swal.fire(`Welcome ${user?.userName}`,),
+
         this.loginControlToLS(this.loginControl))
-      : swal.fire({icon:'warning', title:'Email / Pass no valid', timer: 2000, showConfirmButton: false,background: '#fff url(../../assets/dartM.jpg)'});
+      : swal.fire({icon:'warning', title:'Email or Pass no valids', text:'Please try again', timer: 2000, showConfirmButton: false,background: '#fff url(../../assets/dartM.jpg)'});
       
     console.log('Usuario Logueado: ', user);
     console.log('loginControl: ', this.loginControl);
+
     this.loggedUser = user?.userName;
+
     this.nameToLS(this.loggedUser);
   }
 
 
   logout() {
+    
     this.loginControl = false;
+
+
     this.loginControlToLS(this.loginControl);
     this.loggedUser = 'Guest';
     this.nameToLS(this.loggedUser);
-    swal.fire({icon: 'success', title: 'Logout Successful', timer: 2000, showConfirmButton: false, background: '#fff url(../../assets/dr2D2.jpg)'})
+
+    swal.fire({icon: 'success', title: 'Logout successfully', text:'See you soon',  timer: 2000, showConfirmButton: false, background: '#fff url(../../assets/dr2D2.jpg)'})
   }
 
-  constructor() {}
 
 
-/*
-  grabar_localstorage(){}
-  usuario!: string;
-  email!: string;
-
-  login(){
-    localStorage.setItem("usuario", this.usuario)
-  }
-
-  register(){
-    localStorage.setItem("usuario", this.usuario)
-    localStorage.setItem("email", this.email)
-    
-  }
-*/
 }

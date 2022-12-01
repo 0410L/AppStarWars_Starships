@@ -12,6 +12,7 @@
 
 }
 
+ 
 
 
 .container{
@@ -115,10 +116,23 @@ button{
     background-color: transparent;
 }
 
+.button:hover{
+    color: rgba(79, 179, 250, 0.913);
+    
+}
 
 button:hover{
     color: rgba(79, 179, 250, 0.913);
     
+}
+
+.div.container{
+    padding: none;
+}
+
+.but{
+    font-size: smaller;
+    padding: 0 0 0 0;
 }
 
 
@@ -150,6 +164,23 @@ button:hover{
     .logo{
         src: hidden;
         src: url("/../../assets/logo_horizontal.png");
+    }
+
+    .navbar-dark .navbar-nav .nav-link.active{
+        color: white;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link.active:hover{
+        color: rgb(23, 151, 255);
+        /*border-bottom: 1px solid rgb(79, 179, 250, 0.913);*/
+        box-shadow: none;
+        transition: none;
+    }
+
+    .nav-item:hover{
+        
+        color: rgb(23, 151, 255);
+
     }
 
 

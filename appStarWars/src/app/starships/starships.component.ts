@@ -66,7 +66,7 @@ export class StarshipsComponent implements OnInit {
      this.usersService.checkLoginControl();
      this.usersService.getUserNameLogFromLS('userNameLog');
      if (!this.usersService.loginControl) {
-       swal.fire({icon:'error',title:'You must be logged in to access this area!', text:'please, go to login or signup', timer: 3000, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
+       swal.fire({icon:'error',title:'You cannot enter this area without registering!', text:'Please, go to login or signup', timer: 3500, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
        this.router.navigate(['home'])
        //this.signupComponent.signupModal.open(abrirModal);
        return;

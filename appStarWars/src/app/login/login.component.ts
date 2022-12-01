@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.submit = false;
-    if (this.loginForm.status !== 'VALID') {this.submit = true; swal.fire({icon:'error', title:'Please, check the entered data',timer: 2500, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
+    if (this.loginForm.status !== 'VALID') {this.submit = true; swal.fire({icon:'error', title:'Error inputs', text:'Please, check the data', timer: 2500, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
     } else {
       this.usersService.checkLogin(this.loginForm.value.emailForm, this.loginForm.value.passForm);this.loginModal.dismissAll();
     }

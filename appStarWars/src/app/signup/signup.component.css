@@ -2,10 +2,11 @@
 
 *{
     font-family: 'Oswald', sans-serif;
-    font-size: small;
     letter-spacing: 1px;
     /*background-image: url("/../../assets/background.jpeg");*/
-    color: white
+    color: white;
+    margin: 0px;
+    padding: 0px;
 
 }
 
@@ -19,11 +20,20 @@ input{
     color: black;
 }
 
-button{
-    color: black;
-    background-color: yellow;
+
+.signUp{
+    color: white
 }
 
-button:hover{
-    background-color: rgb(29, 172, 255);
+.signUp:hover{
+    color: rgb(29, 172, 255);
+}
+
+button {
+    color: yellow
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background-color: yellow;
 }

@@ -9,7 +9,7 @@
         <div class="bg-dark" role="document">
           <div class="done modal-content rounded-5 bg-dark border-dark">
             <div class="modal-header" style="border: none">
-              <button type="button" class="btn-close btn-close-white align-self-end close" aria-label="Close" (click)="signupModal.dismiss()"></button></div>
+              <button type="button" class="btn-close btn-close-white align-self-end close button" aria-label="Close" (click)="signupModal.dismiss()"></button></div>
             <div class="modal-body" style="border: none">
               <div class="d-flex justify-content-center align-items-center">
                 <img src="../../../assets/logo login.png"style="width: 60%"/>
@@ -40,7 +40,7 @@
             </form>
       
             <div class="modal-footer row mx-4" style="border: none">
-              <button type="button" class="btn btn-secondary" (click)="submitSignup()">Sign Up</button>
+              <button type="button" class="btn btn-secondary" (click)="submitSignup()">SIGN UP</button>
       
               <div class="text-center">
                 <div class="small haveAccount">Already have an account?
@@ -54,6 +54,6 @@
         </div>
       </ng-template>
       
-      <p class="signUp" type="button" (click)="signupModal.open(abrirModal)">SIGN UP</p>
+      <p class="signUp button" type="button" (click)="signupModal.open(abrirModal)">SIGN UP</p>
       
 </div>

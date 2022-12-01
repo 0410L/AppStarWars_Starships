@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
       this.signupForm.status !== 'VALID') 
       {
       this.submit = true;
-      swal.fire({icon:'error', title:'Please, check the entered data', timer: 2500, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
+      swal.fire({icon:'error', title:'Error inputs', text:'Please, check the data', timer: 2500, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
       //alert('Please, check the entered data');
     } else {
     this.usersService.newUser(this.signupForm.value.nameForm, 

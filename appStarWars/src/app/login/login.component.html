@@ -12,13 +12,13 @@
       <div class="modal-content rounded-5 bg-dark border-dark">
         <div class="modal-header" style="border: none">
           <button
-            type="button" class="btn-close btn-close-white align-self-end close" aria-label="Close"(click)="loginModal.dismiss()"
+            type="button" class="btn-close btn-close-white align-self-end close button" aria-label="Close"(click)="loginModal.dismiss()"
           ></button>
         </div>
-
+ 
         
         <div class="modal-body" style="border: none">
-          <div class="d-flex justify-content-center align-items-center pb-3">
+          <div class="d-flex justify-content-center align-items-center">
             <img src="../../../assets/logo login.png"style="width: 60%"
             />
           </div>
@@ -26,29 +26,27 @@
   
         
         <form class="text-center form-group rounded m-4" [formGroup]="loginForm">
-          <label class="modal-body form-label"
+          <label class="titley modal-body form-label"
             >ENTER YOUR EMAIL ADDRESS</label>
-            <p>
-            </p>
           <input type="email" class="modal-body form-control" placeholder="Email Address" formControlName="emailForm"/>
   
-          <span class="text-center form-text text-danger ms-5" 
+          <span class="text-center form-text text-danger" 
           *ngIf="validacionOK('emailForm') && submit">* Enter a valid Email</span>
           <p>
           </p>
-          <label class="modal-body form-label mt-2 yellow"
+          <label class="titley modal-body form-label"
             >ENTER YOUR PASSWORD</label
           >
           <input type="password" class="modal-body form-control" placeholder="Password" formControlName="passForm"/>
   
-          <span class="text-center form-text text-danger" *ngIf="validacionOK('passForm') && submit">* Enter a valid password, at least 4 characters</span>
+          <span class="form-text text-danger" *ngIf="validacionOK('passForm') && submit">* Please enter a valid password, at least 4 characters</span>
         </form>
        
 
-        <div class="modal-footer row mt-4 mx-4 px-4" style="border: none">
-          <button type="button" class="btn btn-secondary" (click)="login()">Log In</button>
+        <div class="modal-footer row mt-4 mx-3 px-4" style="border: none">
+          <button type="button" class="btn btn-secondary" (click)="login()">LOGIN</button>
           <div class="text-center mt-4">
-            <div class="text-center small stillAccount">You still don't have an account?
+            <div class="small stillAccount">You still don't have an account?
 
               <app-signup
                 class=""(click)="loginModal.dismiss()"
@@ -60,6 +58,6 @@
     </div>
   </ng-template>
   
-  <p class="logIn" type="button" (click)="loginModal.open(contenido)">LOG IN</p>
+  <p class="logIn button" type="button" (click)="loginModal.open(contenido)">LOG IN</p>
   
 </div>
