@@ -61,10 +61,17 @@ fichaNaves(index: number, arrayNaves: number){
   //console.log('ID nave llamada: ', this.idDeNaves);
 }
 
+/*
 clean() {
   this.page = 1;
   this.mostrar = []
   this.page = 1;
+}
+*/
+
+clean() {
+  this.page = 1;
+  this.mostrar = []
 }
 
 /*

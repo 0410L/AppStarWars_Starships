@@ -60,7 +60,7 @@ export class StarshipsComponent implements OnInit {
   constructor (private starshipsService: StarshipsService, private usersService: UsersService, private router: Router){}
 
   load: boolean = false;
-
+/*
   ngOnInit(): void {
 
      this.usersService.checkLoginControl();
@@ -75,6 +75,19 @@ export class StarshipsComponent implements OnInit {
        this.masNaves();
      }
   }
+  */
+  ngOnInit(): void {
+
+    this.usersService.checkLoginControl();
+    this.usersService.getUserNameLogFromLS('userNameLog');
+    if (!this.usersService.loginControl) {
+      swal.fire({icon:'error',title:'You cannot enter this area without registering!', text:'Please, go to login or signup', timer: 3500, showConfirmButton: false, background: '#fff url(../../assets/dartV.jpg)'});
+      this.router.navigate(['home'])
+      //this.signupComponent.signupModal.open(abrirModal);
+      return;
+    } else {
+    }
+ }
 
 }
 
