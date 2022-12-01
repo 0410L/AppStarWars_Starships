@@ -10,22 +10,21 @@
     <div class="hero container-fluid d-flex justify-content-center align-items-center" style="height:100vh; background-image: url(/../../assets/background.jpeg);
     background-size:contain; background-repeat: repeat; background-position: 30% 35%; overflow: auto;" *ngIf ="!navegacionweb">
 
-    <div class="row inicial" style="text-align:center">
+    <div class="row inicial d-flex justify-content-center" style="text-align:center">
         <h3>WELCOME</h3>
         <p></p>
         <h5>CHOOSE YOUR TEAM</h5>
-        <div class="col-3"></div>
-        <div class="col-3">
-            <img src="../../../assets/sableJedi2-anim2.gif" (click)="iniciar()" style="width: 70%" alt="logo" class="jedisable">        
+        <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+            <div (click)="iniciar()" style="" alt="logo" class="jedisable"></div>
             <p></p>   
             <button type="button" (click)="iniciar()" class="btn btn-success jedi" style="justify-content: center" >JEDI</button>
         </div>
-        <div class="col-3">
-            <img src="../../../assets/sableSith2.gif" (click)="iniciar()" style="width: 70%" alt="logo" class="sithsable">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+            <div (click)="iniciar()" style="" alt="logo" class="sithsable"></div>
+            <!--<img src="../../../assets/SABLESITH_STOP.png" (click)="iniciar()" style="width: 70%" class="sithsable">-->
             <p></p>
             <button type="button" (click)="iniciar()" class="btn btn-danger sith" style="justify-content: center" >SITH</button>
         </div>
-        <div class="col-3"></div>
         <p></p>
         
     </div>

@@ -6,7 +6,7 @@ app-navbar-menu {position: sticky;top: 0;}
 *{
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
-    background-image: url("/../../assets/background.jpeg");
+   
 }
 
 h3{
@@ -22,6 +22,56 @@ h5{
     color: aliceblue;
     font-size: larger;
 }
+
+
+.jedisable{
+    background-image:url("/../../assets/SABLEJEDI_SITH.png");
+    height:200px;
+    width:200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+
+
+.jedisable:hover{
+    background-image:url("/../../assets/SABLEJEDI2_PLAY.gif");
+    height:200px;
+    width:200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+
+.sithsable{
+    background-image:url("/../../assets/SABLESITH_STOP.png");
+    height:200px;
+    width:200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+
+
+
+
+.sithsable:hover{
+    background-image:url("/../../assets/SABLESITH_PLAY.gif");
+    height:200px;
+    width:200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+
 
 
 .jedi {
@@ -44,6 +94,7 @@ h5{
     background-color: rgb(0, 255, 21);
 }
 
+
 .sith {
     color: grey;
     background-color: black;
@@ -58,12 +109,5 @@ h5{
 
 }
 
-.sith:active {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 0, 0);
-}
 
 
-.inicial{
-    background-color: none;
-}
