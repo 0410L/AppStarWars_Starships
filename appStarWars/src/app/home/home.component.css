@@ -14,3 +14,7 @@
     font-size: medium;
     background-color: black;
 }
+
+.video{
+    z-index: -1;
+}

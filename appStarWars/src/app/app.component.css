@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
 
-app-navbar-menu {position: sticky;top: 0;}
+app-navbar-menu {position: sticky;top: 0; z-index: 99}
+
+app-home{ z-index: 0}
 
 
 *{

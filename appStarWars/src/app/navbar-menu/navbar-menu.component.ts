@@ -28,7 +28,7 @@ export class NavbarMenuComponent implements OnInit {
   }
 
   navegarWelcome(){
-    this.router.navigate(['home'])
+    this.router.navigate(['home']);
     //this.router.navigate(['welcome'])
   }
 
