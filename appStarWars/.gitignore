@@ -8,6 +8,8 @@
 
 # Node
 /node_modules
+node_modules/sweetalert/
+/node_modules/sweetalert/
 npm-debug.log
 yarn-error.log
 
