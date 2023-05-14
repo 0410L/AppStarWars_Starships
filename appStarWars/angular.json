@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash"
+           ],
             "outputPath": "dist/app-star-wars",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -38,14 +41,13 @@
             "production": {
               "budgets": [
                 {
-                  "type": "initial",
-                  "maximumWarning": "25mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "15mb",
+                  "maximumError": "20mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "25mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "15mb",
+                  "maximumError": "20mb"
                 }
               ],
               "outputHashing": "all"
