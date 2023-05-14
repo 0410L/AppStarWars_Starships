@@ -41,7 +41,6 @@
             "production": {
               "budgets": [
                 {
-                  "type": "initial",
                   "maximumWarning": "15mb",
                   "maximumError": "20mb"
                 },
@@ -102,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
